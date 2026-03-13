@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio website complete</title>
+    </head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav__logo">Yadnesh</a>
+            <ul class="nav__list">
+                <li><a href="#home" class="nav__link">Home</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#skills" class="nav__link">Skills</a></li>
+                <li><a href="#work" class="nav__link">Work</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-container">
+            <div class="home__data">
+                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Yadnesh</span></h1>
+                <a href="#contact" class="button">Contact</a>
+            </div>
+
+            <div class="home__img">
+                <div class="coding-animation">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <div class="dot red"></div>
+                            <div class="dot yellow"></div>
+                            <div class="dot green"></div>
+                        </div>
+                        <div class="window-title">main.js</div>
+                    </div>
+                    
+                    <div class="code-container">
+                        <div class="code-line">
+                            <span class="line-number">1</span>
+                            <span class="code-text"><span class="comment">// Welcome to my portfolio</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">2</span>
+                            <span class="code-text"><span class="keyword">const</span> <span class="variable">developer</span> = {</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">3</span>
+                            <span class="code-text">&nbsp;&nbsp;<span class="variable">name</span>: <span class="string">'Yadnesh'</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">4</span>
+                            <span class="code-text">&nbsp;&nbsp;<span class="variable">skills</span>: [<span class="string">'JavaScript'</span>, <span class="string">'React'</span>],</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">5</span>
+                            <span class="code-text">&nbsp;&nbsp;<span class="variable">passion</span>: <span class="string">'Coding'</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">6</span>
+                            <span class="code-text">};</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">7</span>
+                            <span class="code-text"></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">8</span>
+                            <span class="code-text"><span class="function">console</span>.<span class="function">log</span>(<span class="string">'Let\'s build amazing things!'</span>);</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">9</span>
+                            <span class="code-text"><span class="cursor"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="floating-elements">
+                        <div class="floating-icon">💻</div>
+                        <div class="floating-icon">⚡</div>
+                        <div class="floating-icon">🚀</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <h2 class="section-title">About</h2>
+        <div class="about__container">
+            <div class="about__img">
+                <img src="image.png.jpg" alt="Yadnesh">
+            </div>
+            <div>
+                <h2 class="about__subtitle">I'am Yadnesh Neel</h2>
+                <p class="about__text">I am a B.Tech Computer Engineering student at PCCOE, passionate about leveraging innovative technologies to solve real-world problems. I have hands-on experience in full-stack development. I adapt quickly to new concepts, which enables continuous skill development in today's fast-paced tech environment. My strengths lie in logical thinking and teamwork.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills__container">
+            <div class="skill__card">
+                <i class='bx bxl-html5 skill__icon'></i>
+                <h3 class="skill__name">HTML5</h3>
+            </div>
+            <div class="skill__card">
+                <i class='bx bxl-css3 skill__icon'></i>
+                <h3 class="skill__name">Tailwind CSS</h3>
+            </div>
+            <div class="skill__card">
+                <i class='bx bxl-javascript skill__icon'></i>
+                <h3 class="skill__name">JavaScript</h3>
+            </div>
+            <div class="skill__card">
+                <i class='bx bxl-react skill__icon'></i>
+                <h3 class="skill__name">React</h3>
+            </div>
+            <div class="skill__card">
+                <i class='bx bx-data skill__icon'></i>
+                <h3 class="skill__name">MySQL</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work section" id="work">
+        <h2 class="section-title">Work</h2>
+        <div class="work__content">
+            <div class="work__projects">
+                <h3 class="work__subtitle">Projects</h3>
+                <div class="work__item">
+                    <h4 class="work__item-title">Exam-Portal</h4>
+                    <p class="work__item-description">Developed an online Exam Portal using HTML, CSS, and React that enables students to take multiple-choice question (MCQ) exams and instantly view their results. The platform offers a seamless and interactive testing experience with real-time score display.</p>
+                     <a href="https://github.com/yadnesh18" target="_blank" class="view-code-btn">
+                        <i class='bx bx-code-alt'></i>
+                        View Code
+                    </a>
+                </div>
+            </div>
+
+            <div class="work__achievements">
+                <h3 class="work__subtitle">Achievements</h3>
+                <div class="work__item">
+                    <p class="work__item-description">Qualified 1st round of Smart-India-Hackathon 2024</p>
+                </div>
+                <div class="work__item">
+                    <p class="work__item-description">Reliance Foundation Scholarship Holder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact__container">
+            <a href="mailto:yadneshneel18@gmail.com" target="_blank" class="contact__button">
+                <i class='bx bx-envelope contact__icon'></i>
+                Email
+            </a>
+            <a href="tel:+918530365838" class="contact__button">
+                <i class='bx bx-phone contact__icon'></i>
+                Phone
+            </a>
+            <a href="https://www.instagram.com/_yaduuu_/?next=%2F" target="_blank" class="contact__button">
+                <i class='bx bxl-instagram contact__icon'></i>
+                Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/yadnesh-neel-a5052128b/" target="_blank" class="contact__button">
+                <i class='bx bxl-linkedin contact__icon'></i>
+                LinkedIn
+            </a>
+            <a href="https://github.com/yadnesh18" target="_blank" class="contact__button"> 
+                <i class='bx bxl-github contact__icon'></i>
+                GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__title">Yadnesh</p>
+        <div class="footer__social">
+            <a href="https://github.com/yadnesh18" target="_blank" class="footer__icon"><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/_yaduuu_/?next=%2F" target="_blank" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/in/yadnesh-neel-a5052128b/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <p class="footer__copy">© Yadnesh. All rights reserved</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // ScrollReveal animations
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2000,
+            delay: 200,
+        });
+
+        sr.reveal('.home__data, .about__img, .skills__container, .work__content, .contact__container', {});
+        sr.reveal('.home__img', {delay: 400});
+        sr.reveal('.about__subtitle, .about__text', {delay: 400});
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active nav link
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav__link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-link');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-link');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+</html>
