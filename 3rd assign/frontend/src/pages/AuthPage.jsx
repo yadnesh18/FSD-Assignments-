@@ -4,6 +4,8 @@ import { Eye, EyeOff, Mail, Lock, User, ArrowRight } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 
+const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
+
 export default function AuthPage() {
   const [mode, setMode]         = useState('login'); // 'login' | 'register'
   const [showPass, setShowPass] = useState(false);
@@ -22,7 +24,7 @@ export default function AuthPage() {
     if (mode === 'register' && form.name.trim().length < 2) {
       return toast.error('Name must be at least 2 characters');
     }
-    if (!form.email.includes('@')) return toast.error('Enter a valid email');
+    if (!EMAIL_REGEX.test(form.email)) return toast.error('Enter a valid email address');
     if (form.password.length < 6) return toast.error('Password must be at least 6 characters');
 
     setLoading(true);
@@ -36,7 +38,8 @@ export default function AuthPage() {
       }
       navigate(from, { replace: true });
     } catch (err) {
-      toast.error(err.response?.data?.message || 'Something went wrong');
+      const serverMessage = err.response?.data?.errors?.[0] || err.response?.data?.message;
+      toast.error(serverMessage || 'Something went wrong');
     } finally {
       setLoading(false);
     }
@@ -149,14 +152,14 @@ export default function AuthPage() {
             >
               <p className="font-semibold mb-2" style={{ color: 'var(--text-secondary)' }}>Demo credentials:</p>
               <div className="space-y-1" style={{ color: 'var(--text-muted)' }}>
-                <p>👤 User: <span className="font-mono">john@example.com</span> / <span className="font-mono">user123</span></p>
-                <p>🔑 Admin: <span className="font-mono">admin@ecommerce.com</span> / <span className="font-mono">admin123</span></p>
+                <p>👤 User: <span className="font-mono">user@shopvibe.com</span> / <span className="font-mono">User@123</span></p>
+                <p>🔑 Admin: <span className="font-mono">admin@shopvibe.com</span> / <span className="font-mono">Admin@123</span></p>
               </div>
               <button
                 type="button"
                 className="mt-2 text-xs font-semibold hover:opacity-70 transition-opacity"
                 style={{ color: 'var(--accent)' }}
-                onClick={() => setForm({ name: '', email: 'john@example.com', password: 'user123' })}
+                onClick={() => setForm({ name: '', email: 'user@shopvibe.com', password: 'User@123' })}
               >
                 Fill user credentials →
               </button>

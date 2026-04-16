@@ -4,6 +4,7 @@ import { ArrowRight, Zap, Shield, Truck, RefreshCw, Star } from 'lucide-react';
 import API from '../utils/api';
 import ProductCard from '../components/ProductCard';
 import Loader from '../components/Loader';
+import { useAuth } from '../context/AuthContext';
 
 const CATEGORIES = [
   { name: 'Electronics',    emoji: '⚡', color: '#6366f1' },
@@ -22,6 +23,7 @@ const FEATURES = [
 ];
 
 export default function HomePage() {
+  const { user } = useAuth();
   const [featured, setFeatured] = useState([]);
   const [loading, setLoading]   = useState(true);
 
@@ -52,6 +54,11 @@ export default function HomePage() {
         />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+          {user && (
+            <p className="text-sm uppercase tracking-[0.35em] font-semibold mb-4 animate-fadeUp" style={{ color: '#a0a0a0' }}>
+              Welcome back, {user.name.split(' ')[0]} — new products are waiting.
+            </p>
+          )}
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fadeUp"
             style={{ background: 'rgba(255,107,53,0.15)', color: 'var(--accent)', border: '1px solid rgba(255,107,53,0.3)' }}
@@ -78,7 +85,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fadeUp" style={{ animationDelay: '0.3s' }}>
             <Link to="/products" className="btn-primary text-base px-8 py-4">
-              Explore Shop <ArrowRight size={18} />
+              {user ? 'Continue Shopping' : 'Explore Shop'} <ArrowRight size={18} />
             </Link>
             <Link
               to="/products"
